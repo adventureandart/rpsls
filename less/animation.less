@@ -1,0 +1,35 @@
+@-webkit-keyframes human-bounce { .human-bounce; }
+@-moz-keyframes    human-bounce { .human-bounce; }
+@-ms-keyframes     human-bounce { .human-bounce; }
+@-o-keyframes      human-bounce { .human-bounce; }
+@keyframes         human-bounce { .human-bounce; }
+
+.human-bounce() {
+   0%, 100% {
+      .transform(translateY(0) scaleX(-1) rotate(300deg));
+   }
+   25%, 50%, 75% {
+      .transform(translateY(-25px) scaleX(-1) rotate(300deg));
+   }
+   40%, 65%, 90% {
+      .transform(translateY(15px) scaleX(-1) rotate(300deg));
+   }
+}
+
+@-webkit-keyframes robot-bounce { .robot-bounce; }
+@-moz-keyframes    robot-bounce { .robot-bounce; }
+@-ms-keyframes     robot-bounce { .robot-bounce; }
+@-o-keyframes      robot-bounce { .robot-bounce; }
+@keyframes         robot-bounce { .robot-bounce; }
+
+.robot-bounce() {
+   0%, 100% {
+      .transform(translateY(0) rotate(300deg));
+   }
+   25%, 50%, 75% {
+      .transform(translateY(-25px) rotate(300deg));
+   }
+   40%, 65%, 90% {
+      .transform(translateY(15px) rotate(300deg));
+   }
+}

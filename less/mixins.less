@@ -1,0 +1,36 @@
+//
+// Mixins
+// --------------------------------------------------
+
+.animation(@animation) {
+   -webkit-animation: @animation;
+	-moz-animation:    @animation;
+	-ms-animation:     @animation;
+}
+
+.border-radius(@radius) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius:    @radius;
+	border-radius:         @radius;
+}
+
+.ms-fliph() {
+   -ms-filter: fliph;
+   filter: fliph;
+}
+
+.transform( @transform ) {
+   -webkit-transform: @transform;
+   -moz-transform:    @transform;
+   -ms-transform:     @transform;
+   -o-transform:      @transform;
+   transform:         @transform;
+}
+
+.transition( @transition ) {
+	-webkit-transition: @transition;
+	-moz-transition:    @transition;
+	-ms-transition:     @transition;
+	-o-transition:      @transition;
+   transition:         @transition;
+}

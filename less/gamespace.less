@@ -1,0 +1,129 @@
+/*
+ =Gamespace
+--------------------------------------------------------------*/
+
+.gamespace {
+   border-bottom: 2px solid #ddd;
+   padding-bottom: 20px;
+
+   @media only screen and (min-width : 768px) {
+      padding-bottom: 0;
+   }
+}
+
+.instructions,
+.player {
+   font-size: 125%;
+   text-align: center;
+}
+
+.instructions {
+   margin: 32px 0 -10px;
+}
+
+.player {
+   @media only screen and (min-width : 768px) {
+      &:first-of-type {
+         padding-left: 10%;
+      }
+
+      &:nth-of-type(2n) {
+         padding-right: 10%;
+      }
+   }
+}
+
+.move-list {
+   position: relative;
+   list-style: none;
+   border: 6px solid black;
+   .border-radius(50%);
+   width: 225px;
+   height: 225px;
+   margin: 0 auto;
+
+   li {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      img {
+         width: 150px;
+         height: 150px;
+      }
+   }
+}
+
+.starting-move {
+   &.inactive {
+      display: none;
+   }
+
+   .initialized & {
+      display: block;
+   }
+}
+
+.human-moves {
+   .starting-move {
+      .transform( scaleX(-1) rotate(300deg) );
+      .ms-fliph();
+
+      &.bounce-enter {
+         .animation(human-bounce 2.25s 1);
+      }
+   }
+
+   .scissors-move {
+      .transform( scaleX(-1) );
+      .ms-fliph();
+   }
+}
+
+.robot-moves {
+   .starting-move {
+      .transform( rotate(300deg) );
+
+      &.bounce-enter {
+         .animation(robot-bounce 2.25s 1);
+      }
+   }
+
+   .lizzard-move,
+   .spock-move {
+      .transform( scaleX(-1) );
+      .ms-fliph();
+   }
+}
+
+.move-selector {
+   margin: ( @base-margin * 2 ) auto;
+
+   .form-control {
+      display: inline-block;
+      color: black;
+      border-color: black;
+      width: 150px;
+   }
+
+   button {
+      margin-top: -2px;
+   }
+}
+
+.game-stats {
+   th,
+   td {
+      text-align: center;
+   }
+
+   th {
+      width: 33%;
+      font-size: 125%;
+   }
+
+   td {
+      font-size: 200%;
+   }
+}
