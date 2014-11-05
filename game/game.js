@@ -17,7 +17,7 @@ var rpslsAppGame = angular.module('rpslsApp.game', [])
       // Declare the moves
       var moves = {
          'rock' : { id: 'rock', name: 'Rock', chosen: false, defeats: [
-            { verb: 'crushes', id: 'lizzard' },
+            { verb: 'crushes', id: 'lizard' },
             { verb: 'crushes', id: 'scissors' }
          ]},
          'paper' : { id: 'paper', name: 'Paper', chosen: false, defeats: [
@@ -26,9 +26,9 @@ var rpslsAppGame = angular.module('rpslsApp.game', [])
          ]},
          'scissors' : { id: 'scissors', name: 'Scissors', chosen: false, defeats: [
             { verb: 'cut', id: 'paper' },
-            { verb: 'decapitate', id: 'lizzard' }
+            { verb: 'decapitate', id: 'lizard' }
          ]},
-         'lizzard' : { id: 'lizzard', name: 'Lizzard', chosen: false, defeats: [
+         'lizard' : { id: 'lizard', name: 'Lizard', chosen: false, defeats: [
             { verb: 'poisons', id: 'spock' },
             { verb: 'eats', id: 'paper' }
          ]},

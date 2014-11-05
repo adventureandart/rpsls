@@ -437,7 +437,7 @@ h6 {
   -moz-animation: robot-bounce 2.25s 1;
   -ms-animation: robot-bounce 2.25s 1;
 }
-.robot-moves .lizzard-move,
+.robot-moves .lizard-move,
 .robot-moves .spock-move {
   -webkit-transform: scaleX(-1);
   -moz-transform: scaleX(-1);
